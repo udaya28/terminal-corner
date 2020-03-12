@@ -78,7 +78,7 @@ def inval():
     if (x in range(1,10))and l[x-1]==" ":
       return x
     elif(l[int(x)-1]=="O" or l[int(x)-1]=="X") :
-      print("This position is already filled.........\n Enter the correct:")
+      print("This position is already filled.........\nEnter the correct position ")
       return inval()
     else:
       print ("Input Error: May your input contain,\n 1. Number greater than 9. \n 2.Special character.\n Please enter the correct position...")
@@ -109,14 +109,16 @@ p1="udaya"
 p2="nitesh"
 print ("Enter the position value by 1 to 6")
 count1=1;j=1;
+count2=1
 global prepos
 global m
 for i in range (1,7):
   win()
   if (i%2==0):
-    print(p2,"Enter your ",count1,"coin:")
+    print(p2,"Enter your ",count2,"coin:")
     prepos=inval()
     l[prepos-1]="O"
+    count2=count2+1
     printer()
   else:
     print(p1,"Enter your ",count1,"coin:")
