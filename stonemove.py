@@ -4,7 +4,6 @@ def oppo(i,m):
   l[i-1]=l[m-1]
   l[m-1]=temp
   win()
-  print(l)
     
 def win():
   x=(l[0]==l[1]==l[2]=="X" or l[3]==l[4]==l[5]=="X" or l[6]==l[7]==l[8]=="X")
@@ -64,7 +63,7 @@ def check():
   elif(j%2==1 and l[i-1]=="X"):
     movpos(i)
   else:
-    print("May you selected Empty space or Opponent's coin:\n Enter correct one :")
+    print("May you selected Empty space or Opponent's coin:\n Once again enter the present position and moving position correctly :")
     return check()
     
     
@@ -103,10 +102,8 @@ def printer():
   
 l=[" "," "," "," "," "," "," "," "," "]
 printer()
-#p1=input("Player 1 name:")
-#p2=input("Player 2 name:")
-p1="udaya"
-p2="nitesh"
+p1=input("Player 1 name:")
+p2=input("Player 2 name:")
 print ("Enter the position value by 1 to 6")
 count1=1;j=1;
 count2=1
@@ -128,6 +125,9 @@ for i in range (1,7):
     printer()
 while(1):
   win()
-  print("Enter the present position of the moving coin:")
+  if (j%2==1):
+    print(p1,",Enter the present position of the moving coin:")
+  else:
+    print(p2,",Enter the present position of the moving coin:")
   check()
   j=j+1
